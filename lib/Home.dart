@@ -30,7 +30,6 @@ class _HomeState extends State<Home> {
               break;
             case ConnectionState.waiting:
               _resultado = "Aguarde...";
-              // print(_resultado);
               break;
             case ConnectionState.done:
               if (snapshot.hasError) {
@@ -40,7 +39,6 @@ class _HomeState extends State<Home> {
                     snapshot.data! as Map<String, dynamic>;
                 _resultado = "R\$ ${data["BRL"]["buy"].toString()}";
               }
-              //print(_resultado);
               break;
           }
           return Scaffold(
